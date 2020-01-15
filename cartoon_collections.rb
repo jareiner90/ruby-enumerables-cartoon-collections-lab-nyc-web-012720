@@ -25,7 +25,7 @@ def find_the_cheese(array)
   i = 0
   while i < cheese_types.length
     result = array.find { |item| item.include?(cheese_types[i])}
-    print result
+    result
     i += 1
   end
 end
