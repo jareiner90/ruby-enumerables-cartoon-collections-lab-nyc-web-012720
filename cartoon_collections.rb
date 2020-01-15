@@ -18,9 +18,14 @@ def long_planeteer_calls(array)
   array.any? { |i| i.length > 4}
 end
 
+
 def find_the_cheese(array)
   # the array below is here to help
   cheese_types = ["cheddar", "gouda", "camembert"]
-  result = array.find { |cheese| cheese.include?(cheese_types[0] || cheese_types[1] || cheese_types[2])}
-  print result
+  i = 0
+  while i < cheese_types.length
+    result = array.find { |item| item.include?(cheese_types[i])}
+    print result
+    i += 1
+  end
 end
